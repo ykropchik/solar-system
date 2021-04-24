@@ -1,0 +1,12 @@
+﻿  Source.cpp
+D:\ykrop\Desktop\Study\Third course\Computer graphics\Solar system\Solar system\Source.cpp(30,52): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\ykrop\Desktop\Study\Third course\Computer graphics\Solar system\Solar system\Source.cpp(30,49): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  Solar system.vcxproj -> D:\ykrop\Desktop\Study\Third course\Computer graphics\Solar system\Debug\Solar system.exe
