@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 int main()
 {
@@ -10,7 +11,8 @@ int main()
 	float speed = 0.5f;
 	bool mouseHidden = true;
 	bool wasdUD[6] = { false, false, false, false, false, false };
-	sf::Vector3f pos = sf::Vector3f(0.0f, 0.0f, -25.0f);
+	//sf::Vector3f pos = sf::Vector3f(0.0f, 0.0f, -25.0f);
+	sf::Vector3f pos = sf::Vector3f(0.0f, 0.0f, 0.0f);
 	sf::Clock clock;
 
 	sf::RenderWindow window(sf::VideoMode(w, h), "Ray tracing", sf::Style::Titlebar | sf::Style::Close);

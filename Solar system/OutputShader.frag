@@ -19,8 +19,6 @@ float R = earthDist - moonDist;
 float m = moonDist / earthDist;
 float h = 5.0;
 
-//float u_time = 60;
-
 mat2 rot(float a) {
 	float s = sin(a);
 	float c = cos(a);
@@ -138,11 +136,12 @@ vec3 traceRay(vec3 rayOrigin, vec3 rayDirection) {
 }
 
 void main() {
-	vec2 uv = (gl_TexCoord[0].xy - 0.5) * u_resolution / u_resolution.y;
+	vec2 uv = (gl_TexCoord[0].xy - 0.5) * u_resolution  * 1.5/ u_resolution.y;
 	vec3 rayOrigin = u_pos;
 	vec3 rayDirection = normalize(vec3(1.0, uv));
 	rayDirection.zx *= rot(-u_mouse.y);
 	rayDirection.xy *= rot(u_mouse.x);
+	rayDirection = normalize(rayDirection);
 
 	vec3 col = traceRay(rayOrigin, rayDirection);
 	gl_FragColor = vec4(col, 1.0);
